@@ -6,6 +6,30 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Valor de Pagamento</title>
+    <style>
+        body
+        {
+            padding: 0;
+            margin: 0;
+            background: #8B0000
+        }
+        table
+        {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            font-family: 'arial';
+            top: 50%;
+            left: 15%;
+            color: #FFFFFF;
+        }
+        th, td
+        {
+            padding: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,7 +50,12 @@
         </tr>
     </table>
 
-<a href="{% url 'url_consultar_ligacao' %}">Nova Consulta</a>
+<div style="background-color: #FFFFFF; color: #FF0000; padding: 20px">
+    <a href="{% url 'url_consultar_ligacao' %}" style="color: red">Nova Consulta</a>
+</div>
+<div style="color: #FFFFFF; position: absolute; top: 40%; left: 15%">
+    <h1>Informações sobre a ligação</h1>
+</div>
 
 </body>
 </html>

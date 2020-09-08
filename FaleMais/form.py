@@ -1,4 +1,6 @@
 from django import forms
+from django.forms import ModelForm
+from .models import Ligacao
 
 
 # formulario de dados de ligacao
@@ -22,3 +24,8 @@ class LigacaoForm(forms.Form):
     DDD_destino = forms.ChoiceField(label='DDD_destino', choices=DDD, widget=forms.Select)
     tempo = forms.FloatField(label='Tempo em Minutos')
     plano_falemais = forms.ChoiceField(label='Plano FaleMais', choices=FALEMAIS_PLANS, widget=forms.Select)
+
+class LigacaoForm2(ModelForm):
+    class Meta:
+        model = Ligacao
+        fields = ['DDD_origem', 'DDD_destino', 'tempo', 'plano_falemais']

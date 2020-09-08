@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .form import LigacaoForm
+from .form import LigacaoForm2 as LigacaoForm
 from .models import Tarifa
 
 
@@ -35,12 +35,15 @@ def consultar_ligacao(request):
             return render(request, 'Falemais/preco.html', info_dict)
 
         else:
-            return redirect('url_consultar_ligacao_error')
+            return redirect('url_consultar_ligacao_error', info_dict['DDD_origem'], info_dict['DDD_destino'])
 
     data['form'] = form
     return render(request, 'FaleMais/ligacao_form.html', data)
 
 
 # view de erro de consulta
-def consultar_ligacao_error(request):
-    return render(request, 'FaleMais/cl_error.html')
+def consultar_ligacao_error(request, origem, destino):
+    data = {}
+    data['DDD_origem'] = origem
+    data['DDD_destino'] = destino
+    return render(request, 'FaleMais/cl_error.html', data)

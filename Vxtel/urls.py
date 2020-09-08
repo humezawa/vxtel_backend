@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='url_admin'),
     path('consultar_ligacao/', consultar_ligacao, name='url_consultar_ligacao'),
     path('', home, name='url_home'),
-    path('consultar_ligacao/error', consultar_ligacao_error, name='url_consultar_ligacao_error')
+    path('consultar_ligacao/error/<int:origem>/<int:destino>/', consultar_ligacao_error, name='url_consultar_ligacao_error')
 ]

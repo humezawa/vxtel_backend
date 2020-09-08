@@ -6,13 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Consulta Invalida</title>
+    <style>
+        body
+        {
+            padding: 0;
+            margin: 0;
+            background: #8B0000
+        }
+    </style>
 </head>
 <body>
-
-<h2>Consulta Invalida</h2>
-<ul>Os serviços de ligação estão disponíveis apenas entre a capital(011) e outras localidades.</ul>
-<ul>Ao menos um dos campos de DDD deve ser estar preenchido com 011.</ul>
-<a href="{% url 'url_consultar_ligacao' %}">Nova Consulta</a>
-
+<div style="color: #FFFFFF; position: absolute; left: 5%; top: 10%">
+    <h2>Consulta Invalida</h2>
+    <ul>Origem 0{{DDD_origem}} para destino 0{{DDD_destino}}</ul>
+    <ul><li>Os serviços de ligação estão disponíveis apenas entre a capital(011) e outras localidades.</li></ul>
+    <ul><li>Ao menos um dos campos de DDD deve ser estar preenchido com 011.</li></ul>
+    <ul><li>Dois campos de DDD não devem ter o mesmo valor</li></ul>
+    <a href="{% url 'url_consultar_ligacao' %}" style="color: white">Nova Consulta</a>
+</div>
 </body>
 </html>
