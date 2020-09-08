@@ -1,7 +1,7 @@
 # vxtel_backend
 
 ## __Estrutura__
-O projeto é baseado na framework de aplicação na web Django e segue sua estrutura e configurações padrão. Ou seja, o projeto e dividido no programa principal __Vxtel__, na aplicação __FaleMais__ e no gerenciador __manage.py__.
+O projeto é baseado na framework de aplicação na web Django e segue sua estrutura e configurações padrão. Ou seja, o projeto e dividido no programa principal __Vxtel__, na aplicação __FaleMais__, repositorio de mídia __media__ e no gerenciador __manage.py__.
 
 ### __Vxtel__
 Esse diretorio guarda as configurações principais que mantem a integridade do Django. Sendo assim, apenas o arquivo urls.py foi modificado para corresponder à views da aplicação __FaleMais__
