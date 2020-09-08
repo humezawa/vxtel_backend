@@ -35,3 +35,6 @@ class Tarifa(models.Model):
     # define o nome no gerenciador em admin
     def __str__(self):
         return '{} -> {}'.format(self.DDD_origem, self.DDD_destino)
+
+class Image(models.Model):
+    photo = models.ImageField(upload_to="gallery")

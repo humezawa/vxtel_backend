@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from FaleMais.views import consultar_ligacao, home, consultar_ligacao_error
+from . import settings
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='url_admin'),
@@ -23,3 +27,6 @@ urlpatterns = [
     path('', home, name='url_home'),
     path('consultar_ligacao/error/<int:origem>/<int:destino>/', consultar_ligacao_error, name='url_consultar_ligacao_error')
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
