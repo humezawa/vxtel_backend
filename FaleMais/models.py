@@ -1,8 +1,15 @@
 from django.db import models
 
 
-class Ligacao(models.Model):
-    DDD_origem = models.IntegerField()
-    DDD_destino = models.IntegerField()
-    tempo = models.FloatField()
-    plano_falemais = models.CharField(max_length=12)
+class Tarifa(models.Model):
+    data = models.DateTimeField(auto_now_add=True, name='Ultima Atualização')
+    DDD_origem = models.CharField(max_length=3)
+    DDD_destino = models.CharField(max_length=3)
+    preco_por_minuto = models.FloatField()
+
+    # meta classe
+    class Meta:
+        verbose_name_plural = "Tarifas"
+
+    def __str__(self):
+        return '{} -> {}'.format(self.DDD_origem, self.DDD_destino)

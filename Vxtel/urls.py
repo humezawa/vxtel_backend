@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from FaleMais.views import consultar_ligacao
+from FaleMais.views import consultar_ligacao, home, consultar_ligacao_error
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('consultar_ligacao/', consultar_ligacao),
+    path('admin/', admin.site.urls, name='url_admin'),
+    path('consultar_ligacao/', consultar_ligacao, name='url_consultar_ligacao'),
+    path('', home, name='url_home'),
+    path('consultar_ligacao/error', consultar_ligacao_error, name='url_consultar_ligacao_error')
 ]

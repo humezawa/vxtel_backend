@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Ligacao
+from .models import Tarifa
 
 
-admin.site.register(Ligacao)
-# Register your models here.
+admin.site.register(Tarifa)
