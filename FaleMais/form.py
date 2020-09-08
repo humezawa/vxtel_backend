@@ -1,13 +1,16 @@
 from django import forms
 
 
+# formulario de dados de ligacao
 class LigacaoForm(forms.Form):
+    # escolhas diponiveis para os planos
     FALEMAIS_PLANS = [
         (30, 'FaleMais 30'),
         (60, 'FaleMais 60'),
         (120, 'FaleMais 120')
     ]
 
+    # escolhas disponiveis para os DDDs
     DDD = [
         ('011', '011'),
         ('016', '016'),

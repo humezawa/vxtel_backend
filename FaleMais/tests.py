@@ -4,7 +4,7 @@ import os
 from time import sleep
 
 
-class MySeleniumTests(StaticLiveServerTestCase):
+class TestUser(StaticLiveServerTestCase):
 
     # construtor da conexao
     @classmethod

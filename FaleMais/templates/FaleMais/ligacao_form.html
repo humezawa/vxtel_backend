@@ -6,8 +6,57 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Consulta Vxtel</title>
+    <style>
+        body
+        {
+            padding: 0;
+            margin: 0;
+            background: #8B0000
+        }
+        form
+        {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            font-family: 'arial';
+            top: 50%;
+            left: 15%;
+            color: #FFFFFF
+        }
+        h2
+        {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            font-family: 'arial';
+            top: 45%;
+            left: 15%;
+            color: #FFFFFF
+        }
+        h1
+        {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            font-family: cursive;
+            top: 15%;
+            left: 15%;
+            color: #FFFFFF;
+            font-size: 5em
+        }
+
+    </style>
 </head>
 <body>
+
+<div style="background-color: #FFFFFF; color: #FF0000; padding: 40px">
+    <a href="{url 'url_home'}">Home</a>
+
+</div>
+
+<h1>Central de Consulta</h1>
+
+<h2>Informe os dados de ligação</h2>
 
 <form method="POST">
 
@@ -15,7 +64,7 @@
 
     {{ form.as_p }}
 
-    <button type="submit">Consultar</button>
+    <button type="submit" >Consultar</button>
 
 </form>
 
